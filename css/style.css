@@ -1,11 +1,19 @@
 * {
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 header {
+    /* background: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000; */
     background: white;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,32 +53,98 @@ nav section li {
 }
 
 .nav-item:hover {
-    background: #f4f4f4;
+    background: #dfdfdf;
+    border-radius: 5px;
 }
 
-.banner-img {
-    height: 300px;
+.halaman1 {
     background-image: url(https://picsum.photos/1000);
-    background-size: cover;
+    background-size:cover;
     background-position: center;
+    /* height: 90vh; */
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    color: white;
+    text-align:left;
+}
+
+.halaman1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.text-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 50px;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.our-profile {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f7f9fa;
+}
+
+.our-profile h2 {
+    color: #76a52c;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.our-profile p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .profile-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
+
 
 .profile-item {
-    height: 100px;
-    text-align: -webkit-center;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 25%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.profile-img {
-    height: 50px;
-    background-image: url(https://picsum.photos/250);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50px;
-    width: 50px;
+.profile-item img {
+    width: 100%;
+    height: auto;
+}
 
+.profile-item h3 {
+    color: #76a52c;
+    font-size: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.profile-item:hover {
+    transform: translateY(-15px);
 }
