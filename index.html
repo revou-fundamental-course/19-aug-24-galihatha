@@ -1,75 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="css\style.css">
-    <meta charset="utf-8">
-    <title>title</title>
-  </head>
-  <body>
-    <header>
-        <nav>
-            <div class="logo-icon"></div>
-            <section class="nav-container">
-                <li><a href="http://" class="nav-item">Home</a></li>
-                <li><a href="#our-profile" class="nav-item">Our Profile</a></li>
-                <li><a href="http://" class="nav-item">Achivement</a></li>
-                <li><a href="http://" class="nav-item">Message Us</a></li>
-            </section>
-        </nav>
-    </header>
-
-    <hr />
-    <main>
-        <article>
-            <header>
-                <h1>Welcome user, to our website</h1>
-            </header>
-
-            <p>
-                Lorem ipsum dolor sit amet
-            </p>
-            <div class="banner-img"></div>
-        </article>
-
-        <hr  />
-
-        <section id="our-profile">
-            <header>
-                <h1>Our Facilitation</h1>
-            </header>
-            <section class="profile-container">
-                <div class="profile-item">
-                    <div class="profile-img"></div>
-                    <h2>Software Engineer</h2>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-img"></div>
-                    <h2>Software Engineer</h2>
-                </div>
-
-                <div class="profile-item">
-                    <div class="profile-img"></div>
-                    <h2>Software Engineer</h2>
-                </div>
-
-            </section>
-            
-        </section>
-
-        <section>
-            <form>
-                
-            </form>
-            <div>
-                
+<html>
+    <head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Membuat Navbar Responsive Dengan HTML dan CSS</title>
+    	<link rel="stylesheet" href="css\style.css">
+    </head>
+    <body>
+        <!-- Popup input nama -->
+        <div id="name-popup" class="popup">
+            <div class="popup-content">
+                <h2>Enter your name</h2>
+                <form id="popup-form">
+                    <input type="text" id="popup-name-input" placeholder="Your Name" required>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>Made by Z</p>
-    </footer>
+        <!-- bar navigasi -->
+        <nav class="navbar">
+        	<div class="container">
+                <a class="logo">Rumah Batik</a>
+            
+        		<ul class="menu">
+        			<li><a href="#home-page">Home</a></li>
+        			<li><a href="#our-profile">Our Facilitation</a></li>
+        			<li><a href="#message-page">Message Us</a></li>
+        		</ul>
+            
+            
+        		<div class="tombol">
+        			&#9776;
+        		</div>
+            
+        	</div>
+        </nav>
     
-  </body>
+    	<main>
+            <!-- artikel (Home page) -->
+            <article class="home" id="home-page">
+                <img decoding="async" class="img-slide active" src="https://github.com/galihatha/TubesAJS/blob/main/img/Home.png?raw=true" >
+                <img decoding="async" class="img-slide" src="https://github.com/galihatha/TubesAJS/blob/main/img/Home2.png?raw=true" >
+                <img decoding="async" class="img-slide" src="https://github.com/galihatha/TubesAJS/blob/main/img/Home3.png?raw=true" >
+                
+                <div class="text-content">
+                    <h1 id="welcome-text"></h1>
+                    <div class="logo-and-text">
+                        <h1 class="brand-name">Rumah Batik</h1>
+                    </div>
+                    <p>Uniting Tradition with Innovation</p>
+                </div>
+                        
+                <div class="slider-navigation">
+                    <div class="nav-btn active"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                </div>
+            </article>
+
+            <!-- Our Facilitation page -->
+            <section class="our-profile" id="our-profile">
+                <h2>Our Facilitation</h2>
+                <p>Explore our Facilitation</p>
+
+                <div class="profile-container">
+                    <div class="profile-item">
+                        <img src="https://github.com/galihatha/TubesAJS/blob/main/img/tools1.png?raw=true" alt="">
+                        <h3>Modern Tools</h3>
+                    </div>
+                    <div class="profile-item">
+                        <img src="https://github.com/galihatha/TubesAJS/blob/main/img/fabric.png?raw=true" alt="">
+                        <h3>High Quality Fabric</h3>
+                    </div>
+                    <div class="profile-item">
+                        <img src="https://github.com/galihatha/TubesAJS/blob/main/img/tools2.png?raw=true" alt="">
+                        <h3>Traditional Tools</h3>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Message page -->
+            <section class="container-form" id="message-page">
+                <!-- Bagian Form -->
+                <div class="form-section">
+                  <form id="submitForm">
+                    <h2>Message Us</h2>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="dob">Tanggal Lahir:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    
+                    <label for="gender">Jenis Kelamin:</label>
+                    <select id="gender" name="gender" required>
+                      <option value="Laki-laki">Laki-laki</option>
+                      <option value="Perempuan">Perempuan</option>
+                    </select>
+                    
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+              
+                <!-- Bagian Box Data -->
+                <div class="data-box">
+                  <h2>Your Message</h2>
+                  <div id="submittedData">
+                    Belum ada data yang disubmit.
+                  </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Made by galihatha</p>
+        </footer>
+    
+        <script src="js\script.js"></script>
+    </body>
 </html>
